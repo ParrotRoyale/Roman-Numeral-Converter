@@ -1,86 +1,114 @@
 * {
   color: black;
-  font-family: "roboto slab",serif;
+  font-family: "Roboto Slab", serif;
   font-weight: 300;
   margin: 0;
-  overflow: hidden;
   box-sizing: border-box;
   background-color: #343131;
 }
-h1 {
+
+div.position {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+div.position body {
+  height: 100%;
+  background-color: #343131;
+  z-index: -1;
+}
+
+div.position h1 {
   display: flex;
   justify-content: center;
   border: 3px solid #A04747;
-  width: 100vw;
+  width: 100%;
   margin: 0;
-  top: 150px;
+  padding-top: 5vh;
   color: #EEDF7A;
-  margin-bottom: 20px;
+  margin-bottom: 2vh;
+  height: auto;
+  padding: auto;
+  font-size: 7vw; /* Adjust size based on viewport */
 }
-.instructions {
+
+div.position .instructions {
   color: #EEDF7A;
-  font-size: 18px;
-  width: 82vw;
-  margin-left: 8vw;
+  font-size: 3vw; /* Make font size responsive */
+  width: 80%; /* Adjust width for responsiveness */
+  margin-left: 10%;
   height: 15vh;
   border-radius: 5px;
 }
-input {
-  position: absolute;
+
+div.position input {
+  position: relative;
   color: #EEDF7A;
   background-color: #343131;
   border: 2px solid #A04747;
   border-radius: 5px;
-  height: 15vh;
-  width: 54vw;
-  margin-left: 8vw;
-  top: 150px;
-  font-size: 36px;
+  margin-top: 3vh;
+  height: 10vh;
+  width: 50%; /* Make input width responsive */
+  margin-left: 25%; /* Center input */
+  font-size: 5vw; /* Adjust font size for responsiveness */
 }
+
 input::placeholder {
   color: #EEDF7A;
 }
+
 input:hover {
   background-color: #343131;
   border: 2px solid #A04747;
 }
-input:click {
-  border: 2px solid #A04747;
 
+input:focus {
+  border: 2px solid #A04747;
 }
-button {
-  position: absolute;
-  width: 150px;
-  height: 15vh;
-  font-size: 36px;
+
+div.position button {
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  width: 30%; /* Make button width responsive */
+  font-size: 4vw; /* Adjust font size for button */
   background-color: #A04747;
-    color: #EEDF7A;
+  color: #EEDF7A;
   border: 2px solid #A04747;
   border-radius: 5px;
-  top: 150px;
-  margin-left: 63vw;
+  margin-left: 35%; /* Center button */
+  height: 10vh;
+  padding: 0;
 }
-button:hover {
-background-color: #EEDF7A;
-color: #A04747;
-cursor: pointer;
+
+div.position button:hover {
+  background-color: #EEDF7A;
+  color: #A04747;
+  cursor: pointer;
 }
-div {
+
+div.position div[id="output-box"] {
   border: 2px solid #A04747;
-  position: absolute;
-  top: 47vh;
+  position: relative;
+  top: 2vh;
   border-radius: 5px;
-  margin-left: 8vw;
+  margin-left: 10%;
   height: 20vh;
-  width: 82vw;
+  width: 80%; /* Make output box responsive */
 }
-div p, .output {
+
+p[id="output"] {
   color: #EEDF7A;
   margin-top: 1vh;
   text-align: center;
-  font-size: 24px;
+  font-size: 3vw; /* Adjust font size for responsiveness */
   overflow-wrap: break-word;
 }
+
 div p:hover {
   cursor: pointer;
 }
